@@ -38,3 +38,24 @@ class KnowledgeGraph:
                     next_topics.append(topic)
         return next_topics
 
+
+kg = KnowledgeGraph()
+
+
+kg.add_prerequisite("Machine Learning", "Algorithms")
+kg.add_prerequisite("Deep Learning", "Machine Learning")
+kg.add_prerequisite("Algorithms", "Data Structures")
+kg.add_prerequisite("Data Structures", "Programming Basics")
+
+
+print("To learn Deep Learning, you need:")
+print(" <- ".join(kg.get_prerequisites("Deep Learning")))
+
+
+kg.mark_learned("Programming Basics")
+kg.mark_learned("Data Structures")
+
+
+print("You can now learn:", kg.get_next_learnable())
+
+

@@ -7,7 +7,6 @@ kg = KnowledgeGraph()
 GRAPH_FILE = "Python\DSA\graph_data.txt"
 LEARNED_FILE = "Python\DSA\learned_data.txt"
 
-# Load saved graph data
 import os
 
 if os.path.exists(GRAPH_FILE):
@@ -58,10 +57,9 @@ def show_next():
     next_topics = kg.get_next_learnable()
     output.set("Next learnable topics: " + ", ".join(next_topics))
 
-# GUI setup
 root = tk.Tk()
 root.title("Knowledge Recommendation System")
-root.geometry("400x300")  # Set the window size to 400px wide and 300px high
+root.geometry("400x300") 
 
 entry_topic = tk.Entry(root)
 entry_topic.grid(row=0, column=1, padx=10, pady=5)

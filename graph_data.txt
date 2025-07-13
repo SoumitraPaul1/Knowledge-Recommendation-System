@@ -1,0 +1,5 @@
+C -> Structured Programming
+HTML -> Web Development (Front-end)
+CSS -> Web Development (Front-end)
+JavaScript -> Web Development (Front-end)
+Frameworks/Libraries -> Web Development (Front-end)
